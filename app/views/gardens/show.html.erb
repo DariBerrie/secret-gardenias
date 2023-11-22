@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @garden %>
+<div class="cards">
+  <% @plants.each do |plant| %>
+    <%= render plant %>
+  <% end%>
+</div>
+
+<div id="create-plant-form" class="form-control">
+  <%= render 'create_plant_form' %>
+</div>
+ <%= link_to "Back to gardens", gardens_path %>

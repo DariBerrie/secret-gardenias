@@ -1,0 +1,18 @@
+#create-plant-form{
+  margin-top: 36px;
+  width: 500px;
+  height: auto;
+border-radius: 36px;
+  padding: 24px;
+  border-color: rgb(197, 194, 194);
+}
+
+.form-control {
+  border-color: rgb(197, 194, 194) !important;
+}
+
+input.btn {
+  background-color: rgb(163, 248, 163);
+  color: green;
+  border-radius: 36px;
+}
