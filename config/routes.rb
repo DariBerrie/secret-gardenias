@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resources :plants, only: %w[create]
   end
 
-  resources :plants, only: :destroy
+  resources :plants, only: :destroy do
+    resources :plant_tags, only: %w[new create]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

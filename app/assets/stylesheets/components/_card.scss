@@ -5,6 +5,7 @@
 }
 
 .card-category {
+  position: relative;
   background-size: cover;
   background-position: center;
   width: 300px;
@@ -19,4 +20,21 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 36px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-tags {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  width: 80%;
+  span {
+    background: $green;
+    font-size: .7em;
+    font-weight: 100;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  a {
+    color: white;
+  }
 }

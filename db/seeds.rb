@@ -30,3 +30,9 @@ plant.garden = garden
 plant.save!
 
 puts "#{plant.name} created."
+
+Tag.destroy_all if Rails.env.development?
+tag_categories = ["Flower", "Tree", "Cactus", "Evergreen", "Bonsai"]
+tag_categories.each do |category|
+  Tag.create!(category: category)
+end
