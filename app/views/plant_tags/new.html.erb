@@ -4,7 +4,8 @@
       <h1>Where does <%= @plant.name %> belong?</h1>
 
       <%= simple_form_for [@plant, @plant_tag] do |f| %>
-        <%= f.input :tag, collection: Tag.all.pluck(:category) %>
+        <%# I need to add #label_method to identify the "label" I want to use for the tags...our category attribute. %>
+        <%= f.association :tag, as: :check_boxes, label: "Classify your plant!", label_method: :category %>
         <%= f.submit "Add tag", class: 'btn btn-primary' %>
       <% end %>
     
